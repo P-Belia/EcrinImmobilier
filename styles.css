@@ -64,7 +64,7 @@
 /* Sections */
 
 .accueil-section {
-
+  background: linear-gradient(90deg, var(--amber-100) 0%, var(--gray-200) 100%);
   background-image: url(/Pictures/backgoundlandingpage.png);
   background-repeat: no-repeat;
   background-size: cover;
