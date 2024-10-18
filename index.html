@@ -1,178 +1,186 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ExpatImmo</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Intégration de Font Awesome pour les icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-  <div class="min-h-screen bg-gray-50">
-    <!-- En-tête -->
-    <header class="bg-white shadow-sm">
-      <nav class="container">
-        <div class="nav-content">
-          <div class="logo">ExpatImmo</div>
-          <ul class="nav-links">
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#a-propos">À propos</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#temoignages">Témoignages</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Écrin Immobilier</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Intégration de Font Awesome pour les icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="min-h-screen bg-gray-50">
+      <!-- En-tête -->
+      <header class="bg-white shadow-sm">
+        <nav class="nav-container">
+          <div class="nav-content">
+            <div class="logo">
+              <picture>
+                <source media="(max-width: 768px)" srcset="./logo/logo.png">
+                <source media="(max-width: 1024px)" srcset="./logo/logo2-ecrinimmo.png">
+                <img src="./logo/logo2-ecrinimmo.png" alt="Écrin Immobilier">
+              </picture>            </div>
+            <ul class="nav-links">
+              <li><a href="#accueil">Accueil</a></li>
+              <li><a href="#a-propos">À propos</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
 
-    <!-- Contenu principal -->
-    <main>
-      <!-- Section Accueil -->
-      <section id="accueil" class="accueil-section">
-        <div class="container">
-          <h1>Bienvenue chez ExpatImmo</h1>
-          <p>Votre partenaire de confiance pour l'achat immobilier à l'étranger</p>
-          <button class="btn-primary">Découvrir nos services</button>
-        </div>
-      </section>
+        <!-- Section Accueil -->
+        <section id="accueil" class="accueil-section">
+          <div class="video-background">
+            <video autoplay muted loop id="backgroundVideo">
+              <source src="/Video/OranByNight.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la vidéo HTML5.
+            </video>
+          </div>
+          <div id="accueil-container" class="container">
+            <h1>Bienvenue chez Écrin Immobilier</h1>
+            <p>
+              Votre partenaire de confiance pour l'achat immobilier en Algérie
+            </p>
+          </div>
+        </section>
 
-      <!-- Section À propos -->
-      <section id="a-propos" class="a-propos-section">
-        <div class="container">
-          <h2>À propos de nous</h2>
-          <p>
-            ExpatImmo est spécialisée dans la vente de biens immobiliers aux expatriés. Notre mission est de vous offrir un service personnalisé et de qualité pour faciliter votre installation à l'étranger.
-          </p>
-        </div>
-      </section>
+        <!-- Section À propos -->
+        <section id="a-propos" class="a-propos-section">
+          <div class="a-propos-container">
+            <h2>À propos de nous</h2>
+            <p>
+              Écrin Immobilier est un cabinet de consultants immobiliers basé à
+              Oran, Algérie, spécialisé dans l'accompagnement des expatriés pour
+              l'achat de biens immobiliers.
+            </p>
+          </div>
+        </section>
 
-      <!-- Section Services -->
-      <section id="services" class="services-section">
-        <div class="container">
-          <h2>Nos Services</h2>
-          <div class="services-grid">
-            <div class="service-card">
-              <i class="fas fa-building service-icon"></i>
-              <h3>Vente de biens immobiliers</h3>
-              <p>Expertise dans la vente de propriétés pour expatriés</p>
-            </div>
-            <div class="service-card">
-              <i class="fas fa-plane service-icon"></i>
-              <h3>Prise en charge à l'aéroport</h3>
-              <p>Accueil personnalisé dès votre arrivée</p>
-            </div>
-            <div class="service-card">
-              <i class="fas fa-globe service-icon"></i>
-              <h3>Visite de la ville</h3>
-              <p>Découverte des quartiers pour faciliter votre choix</p>
-            </div>
-            <div class="service-card">
-              <i class="fas fa-user-check service-icon"></i>
-              <h3>Accompagnement personnalisé</h3>
-              <p>Conseils pour l'installation et les démarches administratives</p>
+        <!-- Section Services -->
+        <section id="services" class="services-section">
+          <div id="services-container" class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+              <div class="service-item">
+                <img
+                  src="./Pictures/venteimmopic.webp"
+                  alt="Vente de biens immobiliers"
+                  class="service-image"
+                />
+                <div class="service-text">
+                  <h3>Vente de biens immobiliers</h3>
+                  <p>
+                    Nous proposons une large sélection de biens immobiliers à
+                    vendre, adaptés à tous les budgets et besoins. Que vous
+                    recherchiez une résidence principale, une maison de
+                    vacances, ou un investissement locatif, nous nous adaptons à
+                    vos attentes et vous accompagnons tout au long du processus
+                    de vente.
+                  </p>
+                </div>
+              </div>
+              <div class="service-item">
+                <img
+                  src="./Pictures/assistancepersopic.webp"
+                  alt="Accompagnement personnalisé"
+                  class="service-image"
+                />
+                <div class="service-text">
+                  <h3>Accompagnement personnalisé</h3>
+                  <p>
+                    Nous vous accompagnons de A à Z pour que votre acquisition
+                    immobilière soit une expérience sereine et réussie. Nous
+                    nous adaptons à chaque demande de nos clients, veillant à
+                    chaque étape jusqu'à la remise des clés.
+                  </p>
+                </div>
+              </div>
+              <div class="service-item">
+                <img
+                  src="./Pictures/assistanceadmin-pic .webp"
+                  alt="Assistance administrative"
+                  class="service-image"
+                />
+                <div class="service-text">
+                  <h3>Assistance administrative</h3>
+                  <p>
+                    Toutes les formalités administratives et les actes notariés
+                    sont pris en charge par nos soins. Vous n'avez qu'à profiter
+                    de votre nouvelle acquisition sans vous soucier des
+                    démarches complexes.
+                  </p>
+                </div>
+              </div>
+              <div class="service-item">
+                <img
+                  src="./Pictures/prisechargeairport.webp"
+                  alt="Prise en charge à l'aéroport"
+                  class="service-image"
+                />
+                <div class="service-text">
+                  <h3>Prise en charge à l'aéroport</h3>
+                  <p>
+                    Nous assurons votre prise en charge dès votre arrivée à
+                    l'aéroport d'Oran. Notre équipe vous accueille
+                    chaleureusement et vous accompagne tout au long de votre
+                    séjour, pour vous offrir une expérience sans souci dès les
+                    premiers instants.
+                  </p>
+                </div>
+              </div>
+              <div class="service-item">
+                <img
+                  src="./Pictures/visitepic.webp"
+                  alt="Visite de la ville"
+                  class="service-image"
+                />
+                <div class="service-text">
+                  <h3>Visite de la ville</h3>
+                  <p>
+                    Pour que vous puissiez choisir en connaissance de cause,
+                    nous vous faisons découvrir les différents quartiers d'Oran
+                    et leurs particularités.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Section Témoignages -->
-      <section id="temoignages" class="temoignages-section">
-        <div class="container">
-          <h2>Témoignages</h2>
-          <div class="temoignages-grid">
-            <div class="temoignage-card">
-              <div class="temoignage-header">
-                <img src="https://via.placeholder.com/50" alt="Avatar" class="avatar">
-                <div>
-                  <h4>Client Satisfait 1</h4>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
+        <!-- Section Contact -->
+        <section id="contact-footer" class="contact-footer-section">
+            <h2 class="contact-title">Contactez-nous</h2>
+            <div class="contact-item-container">
+              <div class="contact-item">
+                <img src="/icone/icone-email.png" alt="Mail Icon" class="icon" />
+                <a href="mailto:contact@expatimmo.com" class="contact-link"
+                  >contact@ecrinImmobilier.com</a
+                >
               </div>
-              <p>
-                "ExpatImmo a rendu notre déménagement à l'étranger tellement plus facile. Leur service personnalisé et leur expertise ont été inestimables."
-              </p>
-            </div>
-            <div class="temoignage-card">
-              <div class="temoignage-header">
-                <img src="https://via.placeholder.com/50" alt="Avatar" class="avatar">
-                <div>
-                  <h4>Client Satisfait 2</h4>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
+              <div class="contact-item">
+                <img src="/icone/icone-whatsapp.png" alt="Phone Icon" class="icon" />
+                <a
+                  href="https://wa.me/123456789"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link"
+                  >+33 567-8900 (WhatsApp)</a
+                >
               </div>
-              <p>
-                "Grâce à ExpatImmo, nous avons trouvé la maison parfaite à l'étranger. Leur équipe est très professionnelle et réactive."
-              </p>
             </div>
-            <div class="temoignage-card">
-              <div class="temoignage-header">
-                <img src="https://via.placeholder.com/50" alt="Avatar" class="avatar">
-                <div>
-                  <h4>Client Satisfait 3</h4>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-              </div>
-              <p>
-                "Leur accompagnement personnalisé a été essentiel pour notre installation. Nous les recommandons vivement."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>    
+      <!-- Pied de page -->
+      <footer class="footer">
+        <div class="footer-container">          
+        <p>&copy; 2024 Écrin Immobilier. Tous droits réservés.</p>
+      </footer>
+    </div>
 
-      <!-- Section Contact -->
-      <section id="contact" class="contact-section">
-        <div class="container">
-          <h2>Contactez-nous</h2>
-          <form class="contact-form">
-            <div class="form-group">
-              <input type="text" placeholder="Nom" required>
-            </div>
-            <div class="form-group">
-              <input type="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-              <textarea placeholder="Message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn-primary">Envoyer</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!-- Pied de page -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2024 ExpatImmo. Tous droits réservés.</p>
-        <div class="footer-links">
-          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-          <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <script src="scripts.js"></script>
-</body>
+    <script src="scripts.js"></script>
+  </body>
 </html>
