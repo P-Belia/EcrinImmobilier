@@ -1,47 +1,57 @@
-/* Reset CSS de base */
+/* =========================================
+   1. Reset CSS de base
+========================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Variables de couleurs */
+/* =========================================
+   2. Variables de couleurs
+========================================= */
 :root {
-  --gold-100: #fff3e0; /* teinte plus claire pour les arrière-plans */
-  --gold-200: #ffe4b5; /* couleur secondaire pour l'accentuation */
-  --gold-500: #f5b800; /* couleur dorée principale */
-  --gold-600: #dba800; /* légèrement plus foncée que la principale */
-  --gold-700: #b58800; /* encore plus foncée pour des éléments clés */
-  --gold-800: #936d00; /* pour des accents importants */
+  /* Gold Palette */
+  --gold-100: #fff3e0; /* Teinte plus claire pour les arrière-plans */
+  --gold-200: #ffe4b5; /* Couleur secondaire pour l'accentuation */
+  --gold-500: #f5b800; /* Couleur dorée principale */
+  --gold-600: #dba800; /* Légèrement plus foncée que la principale */
+  --gold-700: #b58800; /* Encore plus foncée pour des éléments clés */
+  --gold-800: #936d00; /* Pour des accents importants */
 
-  --gray-50: #e5e5e5; /* couleur gris clair, presque blanche */
-  --gray-100: #cccccc; /* gris clair */
-  --gray-200: #999999; /* gris moyen */
-  --gray-600: #4b4b4b; /* gris foncé */
-  --gray-700: #2f2f2f; /* gris très foncé */
-  --gray-800: #1b1b1b; /* gris encore plus sombre */
-  --gray-900: #0f0f0f; /* couleur de fond gris anthracite */
+  /* Gray Palette */
+  --gray-50: #e5e5e5;   /* Gris clair, presque blanc */
+  --gray-100: #cccccc;  /* Gris clair */
+  --gray-200: #999999;  /* Gris moyen */
+  --gray-600: #4b4b4b;  /* Gris foncé */
+  --gray-700: #2f2f2f;  /* Gris très foncé */
+  --gray-800: #1b1b1b;  /* Gris encore plus sombre */
+  --gray-900: #0f0f0f;  /* Gris anthracite */
 
-  --white: #ffffff; /* blanc pur */
-  --black: #000000; /* noir pur */
+  /* Neutrals */
+  --white: #ffffff;     /* Blanc pur */
+  --black: #000000;     /* Noir pur */
 }
 
-/* Corps du document */
+/* =========================================
+   3. Styles de base
+========================================= */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 22px; /* Augmenté pour une meilleure lisibilité */
   color: var(--gray-800);
-  background-color: var(--white); /* Couleur de fond globale */
+  background-color: var(--white);
 }
 
-/* Conteneur principal */
+/* =========================================
+   4. Layout Principal
+========================================= */
 .nav-container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* En-tête et navigation */
 .nav-content {
   display: flex;
   justify-content: space-between;
@@ -49,20 +59,21 @@ body {
   padding: 1rem 0;
 }
 
+/* Logo */
 .logo img {
-  left: 0;
   height: 150px;
   width: auto;
 }
 
+/* Navigation */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem; /* Espacement augmenté */
+  gap: 1.5rem;
 }
 
 .nav-links a {
-  font-size: 1.5rem; /* Taille de police ajustée */
+  font-size: 1.5rem;
   text-decoration: none;
   color: var(--gray-700);
   transition: color 0.3s;
@@ -72,12 +83,15 @@ body {
   color: var(--gold-600);
 }
 
-/* Sections */
+/* =========================================
+   5. Sections
+========================================= */
 
+/* Accueil */
 .accueil-section {
   position: relative;
-  height: 70vh; /* Pour s'assurer que la section occupe la hauteur totale de la fenêtre */
-  overflow: hidden; /* Pour s'assurer que tout dépassement est masqué */
+  height: 70vh;
+  overflow: hidden;
 }
 
 .video-background {
@@ -87,7 +101,7 @@ body {
   width: 100vw;
   height: 70vh;
   overflow: hidden;
-  z-index: -1; /* Place la vidéo en arrière-plan */
+  z-index: -1;
 }
 
 #backgroundVideo {
@@ -104,13 +118,11 @@ body {
 
 #accueil-container {
   position: relative;
-  z-index: 1; /* Assure que le contenu est au-dessus de la vidéo */
+  z-index: 1;
   text-align: center;
-  color: var(
-    --white
-  ); /* Couleur du texte pour le rendre lisible sur la vidéo */
+  color: var(--white);
   top: 50%;
-  transform: translateY(-50%); /* Centre verticalement le contenu */
+  transform: translateY(-50%);
 }
 
 .accueil-section h1 {
@@ -126,6 +138,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/* À Propos et Contact */
 .a-propos-section,
 .contact-section {
   padding: 5rem 0;
@@ -153,20 +166,12 @@ body {
 /* Services */
 .services-section {
   padding: 60px 20px; /* Augmenté pour plus d'espace */
-  background-color: var(--white); /* Couleur de fond plus moderne */
+  background-color: var(--white);
 }
 
 #services-container {
   max-width: 80vw;
   margin: 0 auto;
-}
-
-.services-section h2 {
-  color: var(--gold-800); /* Utilisation de la palette */
-  font-size: 3rem; /* Augmenté */
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 60px;
 }
 
 .services-grid {
@@ -187,9 +192,8 @@ body {
 
 .service-image {
   flex: 1;
-  background-color: var(--gray-100); /* Couleur de fond pour les images */
+  background-color: var(--gray-100);
   min-height: 300px; /* Augmenté */
-  height: 207px;
   width: 407px;
   max-width: 650px;
   border-radius: 8px;
@@ -217,7 +221,7 @@ body {
 }
 
 .service-text h3 {
-  color: var(--gold-700); /* Utilisation de la palette */
+  color: var(--gold-700);
   font-size: 2rem; /* Augmenté */
   margin-bottom: 1rem;
 }
@@ -228,24 +232,162 @@ body {
   line-height: 1.6;
 }
 
-/* Media Queries pour les tablettes */
-@media (max-width: 1024px) {
-  #services-container {
-    max-width: 90vw;
-  }
-
-  .service-image,
-  .service-text {
-    max-width: 100%;
-  }
-
-  .service-item {
-    gap: 40px;
-  }
+/* Contact */
+.contact-title {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--gold-800);
 }
 
-/* Media Queries pour les téléphones */
+.contact-item-container {
+  display: inline-flex;
+  width: 100vw;
+  margin-top: 12vh;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 7vh 0 3rem 13.5vw;
+}
+
+/* Cibler le second contact-item */
+.contact-item:nth-child(2) {
+  margin-left: 30vw; /* Déplace horizontalement le second contact */
+}
+
+.contact-item img {
+  height: 5rem;
+  width: 5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-item a {
+  font-size: 1.55rem;
+  font-weight: bold;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--gold-600);
+  margin-right: 1rem;
+}
+
+.contact-link {
+  color: var(--gray-700);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+/* Contact Footer */
+#contact-footer {
+  position: relative;
+  background-image: url(/footer/footer.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 5vw 5vh;
+  height: 800px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+/* =========================================
+   6. Footer
+========================================= */
+.footer {
+  background: linear-gradient(to right, #b8860b, #f0e68c);
+  margin-top: 0;
+  padding: 20px 20px; /* Ajusté pour ajouter de l'espace approprié */
+  color: white;
+  text-align: center;
+  position: relative; /* Pour s'assurer qu'il se superpose correctement */
+  z-index: 1;
+}
+
+.footer-container p {
+  font-size: 0.7rem;
+}
+
+/* =========================================
+   7. Media Queries
+========================================= */
+
+/* Tablettes et plus (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Logo */
+  .logo img {
+    height: 85px;
+  }
+
+  /* Navigation */
+  .nav-links {
+    gap: 0.75rem;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  /* Accueil */
+  .accueil-section h1 {
+    font-size: 3rem;
+  }
+
+  .accueil-section p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    max-width: 90vw;
+    text-align: center;
+  }
+
+  /* À Propos */
+  .a-propos-section p {
+    font-size: 2rem;
+    max-width: 85vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .service-text {
+    max-width: 85vw;
+  }
+
+  /* Contact Footer */
+  #contact-footer {
+    background-image: url(./footer/footer1024.png);
+    background-position: 6vw 3.5vh;
+    height: 45vh;
+  }
+
+  /* Contact */
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh 0 3rem 7vw;
+  }
+
+  .contact-item img {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-item a {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Cibler le second contact-item */
+  .contact-item:nth-child(2) {
+   margin-left: 25vw; /* Déplace horizontalement le second contact */
+ }
+}
+
+/* Téléphones (max-width: 768px) */
 @media (max-width: 768px) {
+  /* Services */
   .service-item {
     flex-direction: column;
     align-items: center;
@@ -280,512 +422,187 @@ body {
   .service-text p {
     font-size: 1.5rem;
   }
-}
 
-#contact-footer {
-  position: relative;
-  background-image: url(/footer/footer.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: 5vw 5vh;
-  height: 800px;
-  margin-top: 10px;
-  overflow: hidden; /* Permettre le débordement */
-}
-
-/* Contact */
-.contact-section {
-  background-color: var(--white); /* Couleur de fond plus moderne */
-  padding: 5rem 0;
-}
-
-.contact-title {
-  font-weight: bold;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: var(--gold-800);
-}
-
-.contact-item-container {
-  display: inline-flex;
-  width: 100vw;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin-top: 7vh;
-  margin-bottom: 3rem;
-  margin-left: 22.5vw;
-}
-
-.contact-item img {
-  display: flex;
-  height: 5rem;
-  width: 5rem;
-}
-
-.contact-item a {
-  font-size: 1.55rem;
-  font-weight: bold;
-}
-
-.icon {
-  width: 2rem;
-  height: 2rem;
-  color: var(--gold-600);
-  margin-right: 1rem;
-}
-
-.contact-link {
-  color: var(--gray-700);
-  text-decoration: none;
-  font-size: 1.5rem; /* Augmenté */
-}
-
-@media screen and (max-width: 1024px) {
-  .logo img {
-    left: 0;
-    height: 85px;
-    width: auto;
-  }
-
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 0.75rem;
-  }
-
-  .nav-links a {
-    font-size: 1.1rem;
-  }
-
-  .accueil-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .accueil-section p {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin: auto;
-    max-width: 90vw;
-    text-align: center;
-  }
-
-  .a-propos-section p {
-    font-size: 2rem;
-    max-width: 85vw;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  #contact-footer {
-    background-image: url(./footer/footer1024.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: 6vw 3.5vh;
-    height: 35vh;
-    margin-top: 10px;
-    overflow: hidden; /* Permettre le débordement */
-  }
-
-  .contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3rem;
-  }
-
-  /* Cibler le premier contact-item */
-  .contact-item:nth-child(1) {
-    margin-top: 5vh; /* Ajuster la position pour le premier contact */
-    margin-left: 7vw; /* Déplace horizontalement le premier contact */
-  }
-
-  /* Cibler le second contact-item */
-  .contact-item:nth-child(2) {
-    margin-top: 5vh; /* Ajuster la position pour le second contact */
-    margin-left: 23vw; /* Déplace horizontalement le second contact */
-  }
-
-  .contact-item img {
-    display: flex;
-    height: 3rem;
-    width: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .contact-item a {
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 728px) {
-  .accueil-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .accueil-section p {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin: auto;
-    max-width: 90vw;
-    text-align: center;
-  }
-
-  .a-propos-section p {
-    font-size: 1.75rem;
-    max-width: 85vw;
-    margin: 0 auto;
-    text-align: center;
-  }
-
+  /* Contact Footer */
   #contact-footer {
     background-image: none;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: 6vw 3.5vh;
-    height: 70vh;
-    margin-top: 10px;
-    overflow: hidden; /* Permettre le débordement */
+    height: 35vh;
   }
 
-  .contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3rem;
-  }
-
-  /* Cibler le premier contact-item */
-  .contact-item:nth-child(1) {
-    margin-top: 5vh; /* Ajuster la position pour le premier contact */
-    margin-left: 4vw; /* Déplace horizontalement le premier contact */
-  }
-
-  /* Cibler le second contact-item */
-  .contact-item:nth-child(2) {
-    margin-top: 5vh; /* Ajuster la position pour le second contact */
-    margin-left: 16vw; /* Déplace horizontalement le second contact */
-  }
-
-  .contact-item img {
-    display: flex;
-    height: 3rem;
-    width: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .contact-item a {
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-align: center;
-  }
-
+  /* Contact */
   .contact-item-container {
-    display: flex;
-    flex-direction: column; /* Arrange les contact-items en colonne */
-    align-items: center; /* Centre les éléments sur l'axe horizontal */
-    margin-top: 80px;
-  }
-
-  .contact-item {
-    width: 80%; /* Réduit la largeur pour s'adapter à l'écran plus petit */
-    margin: 1rem 0; /* Espace entre chaque contact-item */
-    display: flex;
-    flex-direction: column; /* Pour avoir l'image au-dessus et le texte en dessous */
-    align-items: center; /* Centre le contenu à l'intérieur de chaque contact-item */
-  }
-
-  .contact-item img {
-    margin-bottom: 0.5rem; /* Ajoute un petit espace entre l'image et le texte */
-  }
-}
-
-.contact-item a {
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-.contact-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 3rem;
-}
-
-/* Cibler le premier contact-item */
-.contact-item:nth-child(1) {
-  margin-top: 0; /* Ajuster la position pour le premier contact */
-  margin-left: 0; /* Déplace horizontalement le premier contact */
-}
-
-/* Cibler le second contact-item */
-.contact-item:nth-child(2) {
-  margin-top: 0; /* Ajuster la position pour le second contact */
-  margin-left: 0; /* Déplace horizontalement le second contact */
-}
-
-.contact-item img {
-  display: flex;
-  height: 4rem;
-  width: 4rem;
-  margin-bottom: 1rem;
-}
-
-.contact-item a {
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-.footer {
-  background: linear-gradient(
-    to right,
-    #b8860b,
-    #f0e68c
-  ); /* Utilise une couleur dorée et une plus claire pour le dégradé */
-  margin-top: 0px; /* Fais monter le footer pour qu'il chevauche l'image */
-  padding: 5px 5px; /* Ajuste le padding pour ajouter de l'espace approprié */
-  color: white;
-}
-
-.footer-container p {
-  font-size: 0.7rem;
-}
-
-.footer {
-  margin-top: 0px; /* Fais monter le footer pour qu'il chevauche l'image */
-  padding: 10px 10px; /* Ajuste le padding pour ajouter de l'espace approprié */
-  text-align: center;
-}
-
-@media screen and (max-width: 423px) {
-  .logo img {
-    left: 0;
-    height: 100px;
-    width: auto;
-  }
-
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 0.4rem;
-  }
-
-  .nav-links a {
-    font-size: 0.9rem;
-  }
-
-  .accueil-section h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .accueil-section p {
-    font-size: 1.65rem;
-    margin-bottom: 1rem;
-    margin: auto;
-    max-width: 90vw;
-    text-align: center;
-  }
-
-  .a-propos-section p {
-    font-size: 1.5rem;
-    max-width: 85vw;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .a-propos-section h2,
-  .services-section h2,
-  .contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  #contact-footer {
-    background-image: url(./footer/footer428.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: 6vw 3.5vh;
-    height: 25vh;
-    margin-top: 10px;
-    overflow: hidden; /* Permettre le débordement */
-  }
-
-  @media screen and (max-width: 423px) {
-    #contact-footer {
-      background-image: none;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      background-position: 6vw 3.5vh;
-      height: 70vh;
-      margin-top: 10px;
-      overflow: hidden; /* Permettre le débordement */
-    }
-
-    .contact-item-container {
-      display: flex;
-      flex-direction: column; /* Arrange les contact-items en colonne */
-      align-items: center; /* Centre les éléments sur l'axe horizontal */
-      margin-top: 80px;
-    }
-
-    .contact-item {
-      width: 80%; /* Réduit la largeur pour s'adapter à l'écran plus petit */
-      margin: 1rem 0; /* Espace entre chaque contact-item */
-      display: flex;
-      flex-direction: column; /* Pour avoir l'image au-dessus et le texte en dessous */
-      align-items: center; /* Centre le contenu à l'intérieur de chaque contact-item */
-    }
-
-    .contact-item img {
-      margin-bottom: 0.5rem; /* Ajoute un petit espace entre l'image et le texte */
-    }
-  }
-
-  .contact-item a {
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  .contact-item {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-top: 2vh;
   }
 
-  /* Cibler le premier contact-item */
-  .contact-item:nth-child(1) {
-    margin-top: 0; /* Ajuster la position pour le premier contact */
-    margin-left: 0; /* Déplace horizontalement le premier contact */
-  }
-
-  /* Cibler le second contact-item */
-  .contact-item:nth-child(2) {
-    margin-top: 0; /* Ajuster la position pour le second contact */
-    margin-left: 0; /* Déplace horizontalement le second contact */
+  .contact-item {
+    width: 80%;
+    margin: 1rem 0;
   }
 
   .contact-item img {
-    display: flex;
-    height: 4rem;
-    width: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .contact-item a {
     font-size: 1.1rem;
-    font-weight: bold;
-    text-align: center;
   }
 
-  .footer {
-    background: linear-gradient(
-      to right,
-      #b8860b,
-      #f0e68c
-    ); /* Utilise une couleur dorée et une plus claire pour le dégradé */
-    margin-top: 0px; /* Fais monter le footer pour qu'il chevauche l'image */
-    padding: 5px 5px; /* Ajuste le padding pour ajouter de l'espace approprié */
-    color: white;
-  }
-
-  .footer-container p {
-    font-size: 0.7rem;
-  }
-
-  .footer {
-    margin-top: 0px; /* Fais monter le footer pour qu'il chevauche l'image */
-    padding: 10px 10px; /* Ajuste le padding pour ajouter de l'espace approprié */
-    text-align: center;
-  }
+       /* Cibler le second contact-item */
+       .contact-item:nth-child(2) {
+        margin-left: 0; /* Déplace horizontalement le second contact */
+      }
 }
 
-@media screen and (max-width: 375px) {
+/* Petits Téléphones (max-width: 423px) */
+@media (max-width: 423px) {
+  /* Logo */
   .logo img {
-    left: 0;
     height: 80px;
-    width: auto;
   }
 
+  /* Navigation */
   .nav-links {
-    list-style: none;
-    display: flex;
     gap: 0.4rem;
   }
 
   .nav-links a {
-    font-size: 0.9rem;
+    font-size: 0.90rem;
   }
 
+  /* Accueil */
   .accueil-section h1 {
     font-size: 2rem;
-    margin-bottom: 1rem;
   }
 
   .accueil-section p {
     font-size: 1.55rem;
-    margin-bottom: 1rem;
-    margin: auto;
     max-width: 90vw;
     text-align: center;
   }
 
+  /* À Propos */
   .a-propos-section p {
     font-size: 1.5rem;
     max-width: 85vw;
-    margin: 0 auto;
     text-align: center;
   }
 
+  /* Sections Titres */
   .a-propos-section h2,
   .services-section h2,
   .contact-section h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
   }
 
+  /* Services Texte */
   .service-text p {
     font-size: 1.2rem;
   }
 
+  /* Contact Footer */
   #contact-footer {
     background-image: none;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: 6vw 3.5vh;
     height: 70vh;
-    margin-top: 10px;
-    overflow: hidden; /* Permettre le débordement */
   }
 
+  /* Contact */
   .contact-item img {
-    display: flex;
     height: 3rem;
     width: 3rem;
     margin-bottom: 1rem;
   }
+
+  .contact-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .contact-item {
+    width: 80%;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item img {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-item a {
+    font-size: 1.1rem;
+    text-align: center;
+  }
 }
 
-.footer {
-  background: linear-gradient(
-    to right,
-    #b8860b,
-    #f0e68c
-  ); /* Utilise une couleur dorée et une plus claire pour le dégradé */
-  margin-top: 0px; /* Fais monter le footer pour qu'il chevauche l'image */
-  padding: 20px 20px; /* Ajuste le padding pour ajouter de l'espace approprié */
-  color: white;
-  text-align: center;
-  position: relative; /* Pour s'assurer qu'il se superpose correctement */
-  z-index: 1;
+/* Très Petits Téléphones (max-width: 375px) */
+@media (max-width: 375px) {
+  /* Logo */
+  .logo img {
+    height: 80px;
+  }
+
+  /* Navigation */
+  .nav-links {
+    gap: 0.4rem;
+  }
+
+  .nav-links a {
+    font-size: 0.90rem;
+  }
+
+  /* Accueil */
+  .accueil-section h1 {
+    font-size: 2rem;
+  }
+
+  .accueil-section p {
+    font-size: 1.55rem;
+    max-width: 90vw;
+    text-align: center;
+  }
+
+  /* À Propos */
+  .a-propos-section p {
+    font-size: 1.5rem;
+    max-width: 85vw;
+    text-align: center;
+  }
+
+  /* Sections Titres */
+  .a-propos-section h2,
+  .services-section h2,
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  /* Services Texte */
+
+  .service-text {
+    max-width: 85vw;
+  }
+  .service-text p {
+    font-size: 1.2rem;
+  }
+
+  /* Contact Footer */
+  #contact-footer {
+    background-image: none;
+    height: 60vh;
+  }
+
+  /* Contact */
+  .contact-item-container{
+    margin-top: 6vh;
+  }
+
+  .contact-item img {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 1rem;
+  }
 }
